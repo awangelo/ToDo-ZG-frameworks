@@ -46,6 +46,22 @@ environments:
 
 ---
 grails:
+    cors:
+        enabled: true
+        allowedOrigins:
+            - "http://localhost:4200"
+        allowedMethods:
+            - GET
+            - POST
+            - PUT
+            - DELETE
+            - OPTIONS
+        allowedHeaders:
+            - Origin
+            - Accept
+            - Content-Type
+            - Authorization
+        maxAge: 3600
     mime:
         disable:
             accept:
@@ -89,9 +105,10 @@ hibernate:
 dataSource:
     pooled: true
     jmxExport: true
-    driverClassName: org.h2.Driver
-    username: sa
-    password: ''
+    driverClassName: org.postgresql.Driver
+    dialect: org.hibernate.dialect.PostgreSQLDialect
+    username: '${DB_USER:todo_user}'
+    password: '${DB_PASSWORD:todo_password}'
 
 environments:
     development:

@@ -51,12 +51,12 @@ dependencies {
     implementation "org.apache.grails:grails-data-mongodb-gson-templates"
     profile "org.apache.grails.profiles:rest-api"
     runtimeOnly "org.fusesource.jansi:jansi"
-//    runtimeOnly "com.h2database:h2"
     implementation "org.postgresql:postgresql:42.7.10"
     runtimeOnly "com.zaxxer:HikariCP"
     testImplementation "org.apache.grails:grails-testing-support-datamapping"
     testImplementation "org.spockframework:spock-core"
     testImplementation "org.apache.grails:grails-testing-support-views-gson"
+    testImplementation "org.apache.grails:grails-testing-support-web"
 }
 
 compileJava.options.release = 17

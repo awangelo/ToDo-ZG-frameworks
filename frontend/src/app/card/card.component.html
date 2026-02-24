@@ -1,1 +1,18 @@
-<p>card works!</p>
+<a [routerLink]="['/', tarefa.id]"
+   class="block bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow cursor-pointer">
+  <h3 class="text-gray-800 font-semibold text-sm truncate">{{ tarefa.titulo }}</h3>
+  <p *ngIf="tarefa.descricao" class="text-gray-500 text-xs mt-1 line-clamp-2">{{ tarefa.descricao }}</p>
+  <div class="flex items-center justify-between mt-3">
+    <span class="text-xs font-medium px-2 py-0.5 rounded-full"
+          [ngClass]="{
+            'bg-red-100 text-red-700': tarefa.prioridade === 'ALTA',
+            'bg-yellow-100 text-yellow-700': tarefa.prioridade === 'MEDIA',
+            'bg-blue-100 text-blue-700': tarefa.prioridade === 'BAIXA'
+          }">
+      {{ tarefa.prioridade }}
+    </span>
+    <span *ngIf="tarefa.dataLimite" class="text-gray-400 text-xs">
+      {{ tarefa.dataLimite | date:'dd/MM/yyyy' }}
+    </span>
+  </div>
+</a>

@@ -1,5 +1,5 @@
-<div class="flex gap-10 rounded-3xl h-screen bg-white p-20">
-    <app-section class="flex-1" title="ToDo" color="bg-blue-500"></app-section>
-    <app-section class="flex-1" title="Doing" color="bg-yellow-500"></app-section>
-    <app-section class="flex-1" title="Done" color="bg-green-700"></app-section>
+<div class="flex gap-10 rounded-3xl h-screen bg-gray-100 p-20">
+    <app-section class="flex-1" title="ToDo" color="bg-blue-500" [tarefas]="todoTarefas" [status]="Status.TODO"></app-section>
+    <app-section class="flex-1" title="Doing" color="bg-yellow-500" [tarefas]="doingTarefas" [status]="Status.DOING"></app-section>
+    <app-section class="flex-1" title="Done" color="bg-green-700" [tarefas]="doneTarefas" [status]="Status.DONE"></app-section>
 </div>

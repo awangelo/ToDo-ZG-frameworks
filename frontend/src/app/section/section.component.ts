@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class SectionComponent {
   @Input() title: string = '';
-  @Input() color: string = 'bg-gray-900';
+  @Input() color: string = '';
 }

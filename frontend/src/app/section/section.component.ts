@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Tarefa, Status } from '../models';
 
 @Component({
   selector: 'app-section',
@@ -8,4 +9,6 @@ import { Component, Input } from '@angular/core';
 export class SectionComponent {
   @Input() title: string = '';
   @Input() color: string = '';
+  @Input() tarefas: Tarefa[] = [];
+  @Input() status: Status = Status.TODO;
 }
